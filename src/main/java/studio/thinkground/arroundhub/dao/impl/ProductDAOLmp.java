@@ -27,8 +27,3 @@ public class ProductDAOLmp implements ProductDAO {
         return productEntity;
     }
 }
-
-// 8150 qausapi.universestationery.com  qausadmin.universestationery.com ELB-EN-QA
-//  0.0.0.0:8150->80/tcp, :::8150->80/tcp, 0.0.0.0:1306->3306/tcp, :::1306->3306/tcp
-// DB_HOST=172.17.0.4
-//DB_PORT=3306
