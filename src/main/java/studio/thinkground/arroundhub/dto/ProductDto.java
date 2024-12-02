@@ -1,7 +1,6 @@
 package studio.thinkground.arroundhub.dto;
 
 import lombok.*;
-import org.springframework.context.annotation.Bean;
 import studio.thinkground.arroundhub.entity.ProductEntity;
 
 @Data
@@ -10,6 +9,7 @@ import studio.thinkground.arroundhub.entity.ProductEntity;
 @ToString
 @Builder
 public class ProductDto {
+
     private String productId;
     private String productName;
     private int productPrice;
@@ -17,10 +17,10 @@ public class ProductDto {
 
     public ProductEntity toEntity(){
         return ProductEntity.builder()
-            .productId(productId)
+            .productID(productId)
             .productName(productName)
-            .productId(productPrice)
-            .productName(productStock)
+            .productPrice(productPrice)
+            .productStock(productStock)
             .build();
     }
 }

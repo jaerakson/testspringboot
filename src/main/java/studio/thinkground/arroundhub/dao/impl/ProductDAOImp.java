@@ -6,13 +6,13 @@ import studio.thinkground.arroundhub.dao.ProductDAO;
 import studio.thinkground.arroundhub.entity.ProductEntity;
 import studio.thinkground.arroundhub.repository.ProductRepository;
 
+
 @Service
-public class ProductDAOLmp implements ProductDAO {
+public class ProductDAOImp implements ProductDAO {
+
     ProductRepository productRepository;
-
-
     @Autowired //자동으로 연결시켜준다 의미 (new 객체를 선언을 대신해준다)
-    public ProductDAOLmp(ProductRepository productRepository){
+    public ProductDAOImp(  ProductRepository productRepository){
         this.productRepository =productRepository;
     }
 
@@ -21,9 +21,11 @@ public class ProductDAOLmp implements ProductDAO {
         productRepository.save(productEntity);
         return productEntity;
     }
+
+
     @Override
     public ProductEntity getProduct(String productId){
-        ProductEntity productEntity = productRepository.getById(productId);
-        return productEntity;
+        ProductEntity productEntity   = productRepository.getReferenceById(productId);
+        return  productEntity ;
     }
 }

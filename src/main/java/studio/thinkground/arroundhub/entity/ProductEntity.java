@@ -4,11 +4,11 @@ import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import studio.thinkground.arroundhub.dto.ProductDto;
 
-
+@Entity
 @Getter
 @Setter
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -19,4 +19,8 @@ public class ProductEntity {
     String productName;
     Integer productPrice;
     Integer productStock;
+
+    public ProductDto toDto(){
+        return ProductDto.builder()
+    }
 }
