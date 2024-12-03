@@ -1,6 +1,6 @@
 package studio.thinkground.arroundhub.service;
 
-import studio.thinkground.arroundhub.dto.ProductDto;
+import studio.thinkground.arroundhub.data.dto.ProductDto;
 
 public interface ProductService {
     ProductDto saveProduct( String productId, String productName, int productPrice, int productStock);

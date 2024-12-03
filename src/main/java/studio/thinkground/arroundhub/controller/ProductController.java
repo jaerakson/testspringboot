@@ -2,13 +2,14 @@ package studio.thinkground.arroundhub.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import studio.thinkground.arroundhub.dto.ProductDto;
+import studio.thinkground.arroundhub.data.dto.ProductDto;
+import studio.thinkground.arroundhub.service.ProductService;
 
 @RestController
 @RequestMapping("/avi/v1/product-api")
 public class ProductController {
 
-    private ProductService   productService;
+    private final ProductService   productService ;
 
     @Autowired
     public ProductController(ProductService productService) {
@@ -27,8 +28,7 @@ public class ProductController {
         int productPrice = productDto.getProductPrice();
         int productStock = productDto.getProductStock();
 
-        return  productDto.saveProduct(productId,productName,productPrice,productStock) ;
+        return  productService.saveProduct(productId,productName,productPrice,productStock) ;
     }
-    @DeleteMapping(value = "/product/{productId}")
-    public ProductDto deleteProduct(@PathVariable String productId){return null;}
+
 }

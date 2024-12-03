@@ -3,7 +3,7 @@ package studio.thinkground.arroundhub.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import studio.thinkground.arroundhub.dto.MemberDTO;
+import studio.thinkground.arroundhub.data.dto.MemberDTO;
 
 import java.util.Map;
 

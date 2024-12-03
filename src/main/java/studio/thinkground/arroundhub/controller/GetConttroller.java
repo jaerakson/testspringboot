@@ -2,7 +2,7 @@ package studio.thinkground.arroundhub.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import studio.thinkground.arroundhub.dto.MemberDTO;
+import studio.thinkground.arroundhub.data.dto.MemberDTO;
 
 import java.util.Map;
 

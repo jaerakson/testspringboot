@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import studio.thinkground.arroundhub.dto.MemberDTO;
+import studio.thinkground.arroundhub.data.dto.MemberDTO;
 
 import java.util.Map;
 

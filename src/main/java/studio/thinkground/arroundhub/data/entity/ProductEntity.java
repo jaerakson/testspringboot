@@ -1,10 +1,9 @@
-package studio.thinkground.arroundhub.entity;
+package studio.thinkground.arroundhub.data.entity;
 
 import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import studio.thinkground.arroundhub.dto.ProductDto;
 
 @Entity
 @Getter
@@ -20,7 +19,7 @@ public class ProductEntity {
     Integer productPrice;
     Integer productStock;
 
-    public ProductDto toDto(){
-        return ProductDto.builder()
-    }
+//    public ProductDto toDto(){
+//        return ProductDto.builder();
+//    }
 }
