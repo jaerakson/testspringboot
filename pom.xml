@@ -69,11 +69,11 @@
 			<version>2.0.2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>javax.persistence-api</artifactId>
-			<version>2.2</version> <!-- version compatible with your project -->
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>javax.persistence</groupId>-->
+<!--			<artifactId>javax.persistence-api</artifactId>-->
+<!--			<version>2.2</version> &lt;!&ndash; version compatible with your project &ndash;&gt;-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>

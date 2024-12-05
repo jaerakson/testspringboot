@@ -9,7 +9,7 @@ import studio.thinkground.arroundhub.service.ProductService;
 @RequestMapping("/avi/v1/product-api")
 public class ProductController {
 
-    private final ProductService   productService ;
+    private final ProductService productService;;
 
     @Autowired
     public ProductController(ProductService productService) {
@@ -18,8 +18,13 @@ public class ProductController {
 
     @GetMapping(value = "/product/{productId}")
     public ProductDto getProduct(@PathVariable String productId){
-        return productService.getProduct(productId);
+//        return productService.getProduct(productId);
+        ProductDto productDto = productService.getProduct(productId);
+        return productDto;
+
     }
+
+
 
     @PostMapping(value = "/product")
     public ProductDto createProduct(@RequestBody ProductDto productDto){
@@ -27,8 +32,8 @@ public class ProductController {
         String productName = productDto.getProductName();
         int productPrice = productDto.getProductPrice();
         int productStock = productDto.getProductStock();
-
-        return  productService.saveProduct(productId,productName,productPrice,productStock) ;
+        return productDto;
+      //  return  productService.saveProduct(productId,productName,productPrice,productStock) ;
     }
 
 }

@@ -27,9 +27,12 @@ public class ProducntServiceimpl implements ProductService {
 
     @Override
     public ProductDto getProduct(String productId){
-        ProductEntity productEntity = productDataHandler.getProductEntity(productId);
-        ProductDto productDto = new ProductDto( productEntity.getProductID() , productEntity.getProductName(),productEntity.getProductPrice(),productEntity.getProductStock());
+        
+      Product product = productDataHandler.getProductEntity(productId);
 
-        return  productDto;
+     ProductDto productDto = new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getStock());
+     product.
+
+    return productDto;
     }
 }

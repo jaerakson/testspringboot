@@ -16,7 +16,7 @@ import studio.thinkground.arroundhub.data.handler.ProductDataHandler;
 public class ProductDataHandlerimpl implements ProductDataHandler {
     ProductDAO productDAO; // 데이터 저장을 위해..
 
-    @Autowired // 생성자를 통해 의존성 주입을 받음
+    @Autowired  
     public ProductDataHandlerimpl(ProductDAO productDAO ) {
         this.productDAO = productDAO;
     }
